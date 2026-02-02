@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Closing Checklist</title>
+
+<style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #d3d8df;
+        min-height: 100vh;
+    }
+
+    .checklist-container {
+        max-width: 720px;
+        margin: auto;
+        background: #b0b6be; /* full checklist in subtle charcoal */
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 
+            0 24px 50px rgba(30, 50, 90, 0.22),
+            0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .header {
+        text-align: center;
+        padding: 30px 26px 18px;
+    }
+
+    /* LOGO — TWICE AS BIG */
+    .header img {
+        height: 56px;
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    /* TITLE SAME FONT AS CUSTOMER NAME, SAME SIZE */
+    .header h1 {
+        margin: 0 0 4px 0;
+        font-size: 26px; /* unchanged */
+        font-weight: 600;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        letter-spacing: 0.3px;
+        color: #1f3b6d;
+    }
+
+    /* SUBTITLE SAME FONT AS CUSTOMER NAME, SAME SIZE */
+    .header p {
+        margin: 0 0 12px 0;
+        font-size: 16px; /* unchanged */
+        font-weight: 600;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #5b6f89;
+    }
+
+    .customer-name {
+        margin-top: 22px;
+        text-align: left;
+    }
+
+    .customer-name label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #1f3b6d;
+    }
+
+    .customer-name input {
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 15px;
+        border-radius: 12px;
+        border: 1px solid #b9c8d9;
+        background: white;
+    }
+
+    .checklist {
+        padding: 6px 0;
+    }
+
+    .item {
+        display: flex;
+        align-items: flex-start;
+        padding: 14px 24px;
+        border-top: 1px solid #a5abb2;
+        gap: 16px;
+        background: #b0b6be;
+    }
+
+    .item:first-child {
+        border-top: none;
+    }
+
+    .item input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        margin-top: 3px;
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+
+    .item label {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1f3b6d;
+        cursor: pointer;
+        line-height: 1.45;
+    }
+
+    .item input:checked + label {
+        text-decoration: line-through;
+        color: #7d8fa8;
+    }
+
+    .reset-area {
+        text-align: center;
+        padding: 22px 24px 26px;
+        background: #b0b6be;
+    }
+
+    .reset-area button {
+        background: linear-gradient(180deg, #2f4f8f, #1f3b6d);
+        color: white;
+        border: none;
+        padding: 14px 30px;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    .reset-area button:hover {
+        opacity: 0.92;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="checklist-container">
+
+    <div class="header">
+        <img src="C:\Users\filip\OneDrive\Desktop\PNG\ccchecklist.png" alt="Company Logo">
+        <h1>Closing Checklist</h1>
+        <p>Must be done prior to leaving the home!</p>
+
+        <div class="customer-name">
+            <label for="customer">Customer Name</label>
+            <input type="text" id="customer" placeholder="Enter customer name">
+        </div>
+    </div>
+
+    <div class="checklist">
+        <div class="item">
+            <input type="checkbox" id="c1">
+            <label for="c1">Finance documents signed by homeowner when applicable</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="c2">
+            <label for="c2">Result the sale</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="c3">
+            <label for="c3">Review contract details with HO for accuracy</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="c4">
+            <label for="c4">Button up</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="c5">
+            <label for="c5">Both you and HO sign contract</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="c6">
+            <label for="c6">Email contract with welcome letter</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="c7">
+            <label for="c7">Review welcome letter and communicate proper contact information and common questions</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="c8">
+            <label for="c8">Collect down payment in AppSimple</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="c9">
+            <label for="c9">Take and upload clear photos of survey and the entire job site</label>
+        </div>
+        <div class="item">
+            <input type="checkbox" id="c10">
+            <label for="c10">Job well done / medium rare</label>
+        </div>
+    </div>
+
+    <div class="reset-area">
+        <button onclick="resetChecklist()">Reset Checklist</button>
+    </div>
+
+</div>
+
+<script>
+const customerInput = document.getElementById('customer');
+
+customerInput.addEventListener('blur', () => {
+    if (customerInput.value.trim() !== '') {
+        customerInput.readOnly = true;
+    }
+});
+
+function resetChecklist() {
+    document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+    customerInput.value = '';
+    customerInput.readOnly = false;
+}
+</script>
+
+</body>
+</html>
